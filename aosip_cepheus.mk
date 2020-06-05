@@ -15,13 +15,13 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/cepheus/msmnile.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/404/configs/common.mk)
+# Inherit some common AOSIP stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := p404_cepheus
+PRODUCT_NAME := aosip_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
@@ -32,3 +32,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="cepheus"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+WITH_GAPPS=true
